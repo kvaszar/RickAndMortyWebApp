@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="big-wrapper header-wrapper">
+                <img
+                    src="../assets/img/logo.png"
+                    alt="logo"
+                    style="max-width: 112px"
+                />
+                <nav>
+                    <a href="../index.html" class="selected-nav">Главная</a>
+                    <a href="favourites.html">Избранное</a>
+                    <a href="about.html">О проекте</a>
+                </nav>
+                <div class="account-login-wrapper">
+                    <div class="login-wrapper horizontal">
+                        <button name="register" class="white">
+                            Регистрация
+                        </button>
+                        <button name="login" class="black">Войти</button>
+                    </div>
+                    <div class="account-wrapper horizontal hidden">
+                        <span name="account-name"></span>
+                        <button name="exit" class="white">Выйти</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div
+                class="big-wrapper vertical align-center"
+                style="gap: 2.188rem; position: relative"
+            >
+                <a
+                    href="../index.html"
+                    class="horizontal align-center"
+                    style="position: absolute; top: 0; left: 0; gap: 0.938rem"
+                    ><img src="../assets/ico/arrow-back.svg" /><span
+                        >Назад</span
+                    >
+                </a>
+                <h3 class="bold">Локации</h3>
+                <div class="search-wrapper">
+                    <span class="medium smaller-text">Поиск по названию</span>
+                    <span class="medium smaller-text">Поиск по типу</span>
+                    <span class="medium smaller-text"> Поиск по измерению</span>
+                    <input
+                        id="search_name"
+                        placeholder="Введите название локации"
+                    />
+                    <input id="search_type" placeholder="Введите тип локации" />
+                    <input
+                        id="search_dimension"
+                        placeholder="Введите измерение"
+                    />
+                </div>
+                <div id="locations" class="card-wrapper small">
+                    <div class="location-card">
+                        <h2
+                            class="bold"
+                            style="grid-column: span 2; text-align: center"
+                        >
+                            Earth (C-137)
+                        </h2>
+                        <label class="caption small-text">Тип:</label>
+                        <label
+                            class="caption small-text"
+                            style="grid-row: span 2"
+                        >
+                            Количество персонажей, которые в последний раз были
+                            замечены здесь:
+                        </label>
+                        <span class="medium small-text">Planet</span>
+                        <label class="caption small-text">Измерение:</label>
+                        <h2 style="grid-row: span 2">27</h2>
+                        <span class="medium small-text">Dimension C-137</span>
+                        <button class="blue round">
+                            <img src="../assets/ico/plus.svg" />
+                        </button>
+                        <button class="green round hidden">
+                            <img src="../assets/ico/check-empty.svg" />
+                        </button>
+                    </div>
+                </div>
+                <div
+                    id="pages"
+                    class="horizontal align-center"
+                    style="
+                        padding-bottom: 4.25rem;
+                        padding-top: 2rem;
+                        gap: 3.125rem;
+                    "
+                >
+                    <button class="arrow horizontal align-center">
+                        <img src="../assets/ico/arrow-page-prev.svg" />
+                        <img
+                            class="active"
+                            src="../assets/ico/arrow-page-prev-active.svg"
+                        />
+                        <span>Предыдущая</span>
+                    </button>
+                    <div class="horizontal" style="gap: 1.25rem">
+                        <button class="page align-center">1</button>
+                        <button class="page align-center">2</button>
+                        <button class="page align-center">3</button>
+                        <button class="page align-center">4</button>
+                        <button class="page align-center">5</button>
+                    </div>
+                    <button class="arrow horizontal align-center">
+                        <span>Следующая</span>
+                        <img
+                            class="active"
+                            src="../assets/ico/arrow-page-next-active.svg"
+                        />
+                        <img src="../assets/ico/arrow-page-next.svg" />
+                    </button>
+                </div>
+            </div>
+        </main>
+        <div class="form-wrapper vertical align-center hidden">
+            <form id="login-form" class="vertical">
+                <img src="../assets/img/login1.png" class="login-img1" />
+                <img src="../assets/img/login2.png" class="login-img2" />
+                <img src="../assets/img/login3.png" class="login-img3" />
+                <h1>Вход</h1>
+                <div class="vertical" style="gap: 2.188rem; width: 100%">
+                    <input
+                        name="login-or-email"
+                        required
+                        placeholder="Введите логин или E-mail"
+                    />
+                    <div style="position: relative">
+                        <input
+                            type="password"
+                            name="password"
+                            required
+                            placeholder="Введите пароль"
+                        />
+                        <div class="toggle show-password">
+                            <label>
+                                <input type="checkbox" />
+                            </label>
+                        </div>
+                    </div>
+                    <div
+                        class="horizontal"
+                        style="gap: 0.625rem; align-items: center"
+                    >
+                        <div class="toggle">
+                            <label class="remember">
+                                <input
+                                    id="remember"
+                                    type="checkbox"
+                                    name="remember"
+                                />
+                            </label>
+                        </div>
+                        <label for="remember"> Запомнить </label>
+                    </div>
+                </div>
+                <button class="black">Войти</button>
+            </form>
+        </div>
+        <div class="form-wrapper vertical align-center hidden">
+            <form id="register-form" class="vertical">
+                <img src="../assets/img/login1.png" class="login-img1" />
+                <img src="../assets/img/login2.png" class="login-img2" />
+                <img src="../assets/img/login3.png" class="login-img3" />
+                <h2>Регистрация</h2>
+                <div class="vertical" style="gap: 2.188rem; width: 100%">
+                    <input name="email" required placeholder="Введите E-mail" />
+                    <input
+                        name="login"
+                        required
+                        placeholder="Придумайте логин"
+                    />
+                    <input name="name" required placeholder="Введите имя" />
+                    <input
+                        name="surname"
+                        required
+                        placeholder="Введите фамилию"
+                    />
+                    <div style="position: relative">
+                        <input
+                            type="password"
+                            name="password"
+                            required
+                            placeholder="Введите пароль"
+                        />
+                        <div class="toggle show-password">
+                            <label>
+                                <input type="checkbox" />
+                            </label>
+                        </div>
+                    </div>
+                    <div style="position: relative">
+                        <input
+                            type="password"
+                            name="repeat-password"
+                            required
+                            placeholder="Повторите пароль"
+                        />
+                        <div class="toggle show-password">
+                            <label>
+                                <input type="checkbox" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button class="black">Зарегистрировать</button>
+            </form>
+        </div>
+        <script src="../js/account.js"></script>
+        <script src="../js/toggle.js"></script>
+        <script src="../js/locations.js"></script>
+    </body>
+</html>
