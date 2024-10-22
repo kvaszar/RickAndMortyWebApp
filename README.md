@@ -1,2 +1,2 @@
 # RickAndMortyWebApp
-Exam work for ntm/css and js course
+Exam work for ntml/css and js course
